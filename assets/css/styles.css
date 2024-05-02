@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: "Alegreya", serif;
+    width: 100vw;
+}
+
+/* -----------------------------NAV------------------------------- */
+
+header {
+    position: sticky;
+    top: 0;
+}
+
+.menu {
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0.5em;
+    position: relative;
+    width: 100%;
+}
+
+.menu-icon{
+    display: block;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding-top: 7px;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+.logo {
+    width: 3em;
+    margin-left: 2em;
+}
+
+.menu-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+ .menu_items{ 
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.85);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 0;
+    overflow: hidden; 
+    transition: height .3s linear;
+} 
+
+.menu__link {
+  display: block;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.menu__link:hover{
+  background: #DE423A;
+}
+
+.menu__link--select {
+  background: #DE423A;
+}
+
+.mostrar {
+    height: 196px;
+}
+
+.menu-inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9em;
+}
+
+.menu-inicio a {
+  text-decoration: none;
+  color: #fff;
+}
+ 
+/* ---------------------------------BANNER---------------------------------- */
+ 
+ .banner {
+    padding: 0;
+    width: 100vw;
+    height: 25vh;
+    background-color: chocolate;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+} 
+
+h1 {
+    font-size: 3em;
+}
+
+/* -----------------------------PRODUCTOS INDEX------------------------------- */
+
+/* .container-home {
+    height: 80vh;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+} */
+
+
+.container-home {
+  display: grid;
+  grid-template-rows: repeat(3,1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 2em 2em;
+}
+
+.container-home img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ------------------------PRODUCTOS-------------------------------- */
+
+ .container-prod h2 {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #f00;
+} 
+
+
+
+
+
+/* ---------------------FORMULARIO REGISTRO------------------------------ */
+
+.container-form {
+    width: 40%;
+    margin: 0 auto;
+    padding: 1em;
+    border: 10px solid #f005;
+}
+
+.label {
+    margin-bottom: 2em;
+}
+
+.title-form {
+    margin: 1em;
+    font-size: 2em;
+    text-align: center;
+    color: #deb887;
+}
+
+[type="submit" ] {
+    background-color: #7fffd4;
+    width: 15em;
+    height: 3em;
+    font-weight:700;
+}
+
+
+/* ------------------------------INICIO-SESIÓN--------------------------- */
+
+.container-sesion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    height: 80vh;
+}
+
+.container-sesion h2 {
+    margin-bottom: 3em;
+    font-size: 2em;
+}
+
+.container-sesion form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border: 5px solid #023927;
+    padding: 3em;
+    font-size: 1.2em;
+}
+
+
+/* -----------------------------FOOTER------------------------------- */
+
+footer {
+    background-color: #1F1E1E;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 10px; /* Cel */
+}
+
+footer a {
+    color: inherit;
+}
+
+.icon-footer {
+  padding-bottom: 10px;
+}
+
+ .derechos {
+  margin-top: 15px;
+} 
+
+
+/* ---------------------------------------------- RESPONSIVE-------------------------------------------- */
+
+/* -----------------------------------------TABLET----------------------------------------------------------- */
+
+/* ancho de pantalla máxima de 480px */
+@media(max-width: 480px){
+
+
+    .leyenda-logo {
+        display: none;
+    }
+    
+    .leyenda-banner {
+      display: none;
+    }
+    
+    .titulo-tablet {
+      display: none;
+    }
+    
+    .title-footer {
+      display: none;
+    }
+}
+
+
+@media(min-width: 480px) and (max-width: 768px){
+
+    .menu-logo {
+      display: none;
+    }
+    
+    .menu {
+      background-color: chocolate;
+    }
+
+    .menu-inicio{
+      font-weight: 500;
+    }
+
+    .titulo-tablet {
+      font-size: 1.5em;
+      font-weight: 700;
+    }
+    
+    .banner {
+      background-color: #deb887;
+      height: 20vh;
+    }
+    
+    .leyenda-banner {
+      font-size: 1.5em;
+      font-weight: 400;
+      padding: 1em;
+    }
+    
+    h1 {
+      display: none;
+    }
+    
+    footer {
+      height: 20%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+    }  
+    
+    .texto-footer {
+      border: 1;
+    }
+    
+    .icon-footer {
+      order: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    footer h2 {
+      margin: 0px;
+    }
+    
+}
+
+@media(min-width: 768px){
+
+  .items {
+    display: inline;
+  }
+
+    .menu-icon {
+      display: none;
+    }
+
+    .menu_items{
+      position: static;
+      overflow: visible;
+      width: auto;
+      height: auto;
+      display: flex;
+    }
+
+    .menu__link {
+      display: inline;
+      padding: 10px;
+    }
+    
+    .menu__link--select {
+      background: transparent;
+    }
+      
+/*     
+    .menu__link {
+      display: inline;
+      padding: 0;
+    } */
+
+    .titulo-tablet {
+      display: none;
+    }
+
+    .menu-inicio {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+  }
+
+
+
+
+}
+
+/* min-width:480px
+min-width:768px
+min-width:1024px */
