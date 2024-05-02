@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/Proyecto-CAC/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
     
     <title>eFe - Accesorios deportivos</title>
 </head>
@@ -22,107 +22,125 @@
 
 <!-----------------------------------HEADER---------------------------------------------->
 <header>
-    <nav>
-        <ul class="nav-ul">
-                <li><a href="/"><i class="fa-solid fa-house"></i></a></li>
-                <li><a href="/Proyecto-CAC/pages/productos.html">Productos</a></li> <!-- <a href="">Ofertas</a> -->
-                <li><a href="">Ofertas</a></li>
-                <li><a href="">Contacto</a></li>    
-        </ul>
+    <nav class="menu">
+            <span id="boton_menu"><i class="fa-solid fa-bars menu-icon"></i></span>   
+            <p class="titulo-tablet">efe - Accesorios deportivos</p>   
+                <ul class="menu_items" id="menu_items">
+                    <li><a href="/" class="menu__link menu__link--select"><i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="pages/productos.html" class="menu__link">Productos</a></li> 
+                    <li><a href="" class="menu__link">Ofertas</a></li>
+                    <li><a href="" class="menu__link">Contacto</a></li>
+                </ul>
 
-        <div class="nav-logo">
-            <img src="/Proyecto-CAC/assets/imgs/logo.png" alt="logo efe" class="logo">
-            <span>Accesorios deportivos</span>               
-        </div>
+            <div class="menu-logo">
+                <img src="/assets/imgs/logo.png" alt="logo efe" class="logo">
+                <span class="leyenda-logo">Accesorios deportivos</span>   
+            </div>
 
-        <div class="nav-inicio">  
-            <a href="/Proyecto-CAC/pages/registro.html">Registrarse</a>          
-            <a href="/Proyecto-CAC/pages/inicio-sesion.html">Iniciar Sesión</a>
-        </div>
+            <div class="menu-inicio">  
+                <a href="/pages/registro.html">Registrarse</a>          
+                <a href="/pages/inicio-sesion.html">Iniciar Sesión</a>
+            </div>
     </nav>
 </header>
 
 <!-----------------------------------MAIN---------------------------------------------->
-    <main class="container-prod">
+    <main class="prod-pages">
 
-        <h2>Nuestros Productos</h2>
-
-        <section class="prod-imantadas" id="imantadas">
-            <h3>IMANTADAS</h3>
-
-            <p>Tamaño: 25 x 37 cm - Uso: Fibrón de pizarra + fichas imantadas </p>
-            <p>Precio: $</p>
-
-            <div class="prod">
-                <img src="/Proyecto-CAC/assets/imgs/Futbol.png" alt="Pizarra-futbol">
-            </div>
-
-            <div class="prod">
-                <img src="/Proyecto-CAC/assets/imgs/Voley.png" alt="Pizarra-voley">
-            </div>
-
-            <div class="prod">
-                <img src="/Proyecto-CAC/assets/imgs/Hockey.png" alt="Pizarra-Hockey">
-            </div>
-
-            <div class="prod">
-                <img src="/Proyecto-CAC/assets/imgs/Basquet.png" alt="Pizarra-Basquet">
-            </div>
-
-            <div class="prod">
-                <img src="/Proyecto-CAC/assets/imgs/Handball.png" alt="Pizarra-Handball">
-            </div>
-
+        <section class="banner">
+            <h2>Nuestros Productos</h2>
         </section>
 
+        <section class="container-prod">
+            
+            <div class="prod-imantadas">
+                
+                <div class="description">
+                    <h3 id="imantadas">IMANTADAS</h3>
+                    <p class="info-prod">Tamaño: 25 x 37 cm - Uso: Fibrón de pizarra + fichas imantadas </p>
+                    <p class="precio-prod">Precio: $</p>
+                </div>
 
-        <section>
-            <div class="prod-personalizadas" id="personalizadas">
-                <p>PERSONALIZADAS</p>
-                <p>Precio: $</p>
+                <div class="imgs-productos">
+                    <div class="prod">
+                        <img src="/assets/imgs/Futbol.png" alt="Pizarra-futbol">
+                    </div>
+
+                    <div class="prod">
+                        <img src="/assets/imgs/Voley.png" alt="Pizarra-voley">
+                    </div>
+
+                    <div class="prod">
+                        <img src="/assets/imgs/Hockey.png" alt="Pizarra-Hockey">
+                    </div>
+
+                    <div class="prod">
+                        <img src="/assets/imgs/Basquet.png" alt="Pizarra-Basquet">
+                    </div>
+
+                    <div class="prod">
+                        <img src="/assets/imgs/Handball.png" alt="Pizarra-Handball">
+                    </div>
+                </div>
             </div>
 
-            <div class="prod">
-                <img src="/Proyecto-CAC/assets/imgs/personalizadas1.png" alt="personalizadas1">
+
+            <div class="prod-personalizadas">
+
+                <div class="description">   
+                    <h3 id="personalizadas">PERSONALIZADAS</h3>
+                    <p class="precio-prod">Precio: $</p>
+                </div>
+
+                <div class="imgs-productos">
+                    <div class="prod">
+                        <img src="/assets/imgs/personalizadas1.png" alt="personalizadas1">
+                    </div>
+
+                    <div class="prod">
+                        <img src="/assets/imgs/personalizadas2.png" alt="personalizadas2">
+                    </div>
+
+                    <div class="prod">
+                        <img src="/assets/imgs/personalizadas3.png" alt="personalizadas3">
+                    </div>
+                </div>
+
             </div>
+            
 
-            <div class="prod">
-                <img src="/Proyecto-CAC/assets/imgs/personalizadas2.png" alt="personalizadas2">
-            </div>
+            <div class="prod-minis">
 
-            <div class="prod">
-                <img src="/Proyecto-CAC/assets/imgs/personalizadas3.png" alt="personalizadas3">
-            </div>
+                <div class="description">                  
+                    <h3 id="minis">MINI PIZARRAS</h3>
+                    <p class="info-prod">Prácticas y cómodas... Para que las puedas tener siempre a mano en tu mochila.</p>
+                    <p class="info-prod"> Tamaño: 15 x 21 cm - Uso: fibrón de pizarra.</p>
+                    <p class="precio-prod">Precio: $</p>
+                </div>
 
-        </section>
+                <div class="imgs-productos">
 
+                    <div class="prod">
+                        <img src="/assets/imgs/Futbol-mini.png" alt="futbol-mini">
+                    </div>
 
-        <section class="prod-minis" id="minis">
-            <h3>MINI PIZARRAS</h3>
+                    <div class="prod">
+                        <img src="/assets/imgs/voley-mini.png" alt="voley-mini">
+                    </div>
 
-            <h4>Prácticas y cómodas... Para que las puedas tener siempre a mano en tu mochila.</h4>
+                    <div class="prod">
+                        <img src="/assets/imgs/hockey-mini.png" alt="Hockey-mini">
+                    </div>
 
-            <p> Tamaño: 15 x 21 cm - Uso: fibrón de pizarra.</p>
-            <p>Precio: $</p>
+                    <div class="prod">
+                        <img src="/assets/imgs/Basquet-mini.png" alt="Basquet-mini">
+                    </div>
 
-            <div class="prod">
-                <img src="/Proyecto-CAC/assets/imgs/Futbol-mini.png" alt="futbol-mini">
-            </div>
+                    <div class="prod">
+                        <img src="/assets/imgs/handball-mini.png" alt="Handball-mini">
+                    </div>
+                </div>
 
-            <div class="prod">
-                <img src="/Proyecto-CAC/assets/imgs/voley-mini.png" alt="voley-mini">
-            </div>
-
-            <div class="prod">
-                <img src="/Proyecto-CAC/assets/imgs/hockey-mini.png" alt="Hockey-mini">
-            </div>
-
-            <div class="prod">
-                <img src="/Proyecto-CAC/assets/imgs/Basquet-mini.png" alt="Basquet-mini">
-            </div>
-
-            <div class="prod">
-                <img src="/Proyecto-CAC/assets/imgs/handball-mini.png" alt="Handball-mini">
             </div>
         </section>
     </main>
@@ -141,5 +159,8 @@
         <p>eFe - Pizarras tácticas | Mar del Plata | Todos Los Derechos Reservados. 2024</p>
         </div>
     </footer>
+
+    <script type="text/javascript" src="/assets/js/menu.js"></script>
+
 </body>
 </html>

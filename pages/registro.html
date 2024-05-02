@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/Proyecto-CAC/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
     
     <title>eFe - Accesorios deportivos</title>
 </head>
@@ -22,22 +22,25 @@
 
 <!-----------------------------------HEADER---------------------------------------------->
 <header>
-    <nav>
-        <ul class="nav-ul">
-                <li><a href="/"><i class="fa-solid fa-house"></i></a></li>
-                <li><a href="/Proyecto-CAC/pages/productos.html">Productos</a></li> <!-- <a href="">Ofertas</a> -->
-                <li><a href="">Ofertas</a></li>
-                <li><a href="">Contacto</a></li>
-        </ul>
+    <nav class="menu">
+            <span id="boton_menu"><i class="fa-solid fa-bars menu-icon"></i></span>   
+            <p class="titulo-tablet">efe - Accesorios deportivos</p>   
+                <ul class="menu_items" id="menu_items">
+                    <li><a href="/index.html" class="menu__link menu__link--select"><i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="/pages/productos.html" class="menu__link">Productos</a></li> 
+                    <li><a href="" class="menu__link">Ofertas</a></li>
+                    <li><a href="" class="menu__link">Contacto</a></li>
+                </ul>
 
-        <div class="nav-logo">
-            <img src="/Proyecto-CAC/assets/imgs/logo.png" alt="logo efe" class="logo">
-            <span>Accesorios deportivos</span>               
-        </div>
+            <div class="menu-logo">
+                <img src="/assets/imgs/logo.png" alt="logo efe" class="logo">
+                <span class="leyenda-logo">Accesorios deportivos</span>   
+            </div>
 
-        <div class="nav-inicio">          
-            <a href="/Proyecto-CAC/pages/inicio-sesion.html">Iniciar Sesión</a>
-        </div>
+            <div class="menu-inicio">  
+                <a href="/pages/registro.html">Registrarse</a>          
+                <a href="/pages/inicio-sesion.html">Iniciar Sesión</a>
+            </div>
     </nav>
 </header>
 
@@ -130,5 +133,8 @@
         <p>eFe - Pizarras tácticas | Mar del Plata | Todos Los Derechos Reservados. 2024</p>
         </div>
     </footer>
+
+    <script type="text/javascript" src="/assets/js/menu.js"></script>
+
 </body>
 </html>
