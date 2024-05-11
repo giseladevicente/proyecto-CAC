@@ -9,7 +9,10 @@ body {
     color: #fff;
     font-family: "Alegreya", serif;
     width: 100vw;
+    height: 100vh;
 }
+
+
 
 /* -----------------------------NAV------------------------------- */
 
@@ -186,10 +189,13 @@ h1 {
 /* ---------------------FORMULARIO REGISTRO------------------------------ */
 
 .container-form {
-    width: 40%;
-    margin: 0 auto;
-    padding: 1em;
-    /* border: 10px solid #f005; */
+  padding: 1em;    
+}
+
+.container-form-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .label {
@@ -197,10 +203,16 @@ h1 {
 }
 
 .title-form {
-    margin: 1em;
+    margin-bottom: 1em;
     font-size: 2em;
     text-align: center;
     color: #deb887;
+    text-decoration-line: underline;
+}
+
+.boton-form {
+  display: flex;
+  justify-content: center;
 }
 
 [type="submit" ] {
@@ -217,10 +229,9 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
     flex-direction: column;
-    height: 80vh;
 }
+
 
 .container-sesion h2 {
     margin-bottom: 3em;
@@ -236,6 +247,12 @@ h1 {
     border: 5px solid #023927;
     padding: 3em;
     font-size: 1.2em;
+}
+
+.footer-inicio-sesion {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 
@@ -269,9 +286,7 @@ footer a {
 
 /* ------------------- CELULARES------------------------------------ */
 
-/* ancho de pantalla máxima de 480px */
-@media(max-width: 480px){
-
+@media(max-width: 767px){
 
     .leyenda-logo {
         display: none;
@@ -293,7 +308,7 @@ footer a {
 
 
 /* ------------------- TABLET ------------------------------------ */
-@media(min-width: 480px) and (max-width: 768px){
+@media(min-width: 768px) and (max-width: 1023px){
 
     .menu-logo {
       display: none;
@@ -326,6 +341,25 @@ footer a {
     h1 {
       display: none;
     }
+
+    
+    .container-home {
+      margin: 4em;
+    }
+
+    .imgs-productos {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container-form {
+      width: 50%; 
+      border: 10px solid #f005;
+      margin: 3.5em auto;
+    }
+
+    .container-sesion h2 {
+      margin-top: 2em;
+    }
     
     footer {
       height: 20%;
@@ -351,19 +385,12 @@ footer a {
       margin: 0px;
     }
 
-    .container-home {
-      margin: 4em;
-    }
-
-    .imgs-productos {
-      grid-template-columns: repeat(2, 1fr);
-    }
     
 }
 
 /* ------------------- PCS ------------------------------------ */
 
-@media(min-width: 768px){
+@media(min-width: 1024px){
 
   .items {
     display: inline;
@@ -417,9 +444,10 @@ footer a {
     grid-template-columns: repeat(3, 1fr);
   }
 
-
+  .container-form {
+    width: 40%;
+    border: 10px solid #f005;
+    margin: 0 auto;
+  }
 }
 
-/* min-width:480px
-min-width:768px
-min-width:1024px */
