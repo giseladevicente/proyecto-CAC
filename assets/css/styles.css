@@ -249,13 +249,6 @@ h1 {
     font-size: 1.2em;
 }
 
-.footer-inicio-sesion {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-
 /* -----------------------------FOOTER------------------------------- */
 
 footer {
@@ -280,6 +273,13 @@ footer a {
  .derechos {
   margin-top: 15px;
 } 
+
+.footer-inicio-sesion {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 
 
 /* ---------------------------------------------- RESPONSIVE-------------------------------------------- */
