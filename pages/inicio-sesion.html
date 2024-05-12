@@ -47,26 +47,25 @@
 
     <!-----------------------------------MAIN---------------------------------------------->
     <main>
-        <section class="container-sesion">
-            
-            <h2>Iniciar Sesión</h2>
-        
-            <form action="#" method="post">
-                <div>
-                    <label for="usuario">Usuario</label>
-                    <input type="text" name="usuario" id="usuario">
-                </div>
-
-                <div>
-                    <label for="password">Contraseña</label>
-                    <input type="password" name="password" id="password">
-                </div>
+        <section class="login">  
+            <!-- <div class="container.sesion">   -->
                 
-                <input type="submit" value="Iniciar">
-            </form>
+                <h2 class="title-sesion">Iniciar Sesión</h2>
+                
+                <form action="#" method="post" class="form">
 
+                        <label for="usuario" class="label-inicio">Usuario</label>
+                        <input type="text" name="usuario" id="usuario" class="input-inicio">
+                
+                        <label for="password" class="label-inicio">Contraseña</label>
+                        <input type="password" name="password" id="password" class="input-inicio" placeholder="*********">
+                    
+                    <input type="submit" value="Iniciar" class="login-button">
+                </form>
+            <!-- </div> -->
         </section>
     </main>
+
     <!-----------------------------------FOOTER---------------------------------------------->
     <footer class="footer-inicio-sesion">
         <div class="icon-footer">

@@ -225,28 +225,53 @@ h1 {
 
 /* ------------------------------INICIO-SESIÓN--------------------------- */
 
-.container-sesion {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.login {
+    width: 100%;
+    height: 60vh;
+    display: grid;
+    place-items: center;
 }
 
-
-.container-sesion h2 {
-    margin-bottom: 3em;
-    font-size: 2em;
+.title-sesion {
+  margin: 1em;
 }
 
-.container-sesion form {
+.form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 30px;
     border: 5px solid #023927;
-    padding: 3em;
+    padding: 2em;
     font-size: 1.2em;
+}
+
+.label-inicio {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+
+.input-inicio {
+  background-color: #e8e8e8;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  height: 32px;
+  padding: 6px;
+  margin-bottom: 2em;
+  font-size: 14px;
+}
+
+.login-button {
+  border-radius: 8px;
+  color: #fff;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  font-weight: bold;
+  height: 40px;
+  margin-top: 3em;
 }
 
 /* -----------------------------FOOTER------------------------------- */
