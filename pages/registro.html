@@ -50,40 +50,41 @@
         <h2 class="title-form">Registrate!!</h2>
 
         <div class="container-form-flex">
-        <form action="#" method="post" class="form-registro"><!-- # Es para poder simular que se envian los datos -->
+        <form action="#" method="post" class="form-registro" id="formulario-registro"><!-- # Es para poder simular que se envian los datos -->
+            
             <div class="label">              
                 <label for="name">Nombre: </label>
-                <input type="text" name="name-usuario" id="name">
+                <input type="text" name="name" id="name" placeholder="Escribí tu nombre" required>
             </div>
 
             <div class="label">
                 <label for="lastname">Apellido: </label>
-                <input type="text" name="lastname-usuario" id="lastname">
-            </div>
-
-            <div class="label">
-                <p>Sexo: </p>
-                <input type="radio" name="sexo-usuario" id="sexo" value="f">
-                <label for="sexo">Femenino</label>
-                
-                <input type="radio" name="sexo-usuario" id="sexo" value="m">
-                <label for="sexo">Masculino</label>
+                <input type="text" name="lastname" id="lastname" placeholder="Escribí tu apellido" required>
             </div>
 
             <div class="label">
                 <label for="email">Correo electrónico: </label>
-                <input type="email" name="email-usuario" id="email">
+                <input type="email" name="email" id="email" placeholder="xxxxx@gmail.com">
+            </div>
+
+            <div class="label">
+                <p>Sexo: </p>
+                <input type="radio" name="sexo" id="sexo" value="f">
+                <label for="sexo">Femenino</label>
+                
+                <input type="radio" name="sexo" id="sexo" value="m">
+                <label for="sexo">Masculino</label>
             </div>
 
 
             <div class="label">
                 <label for="date">Fecha de nacimiento: </label>
-                <input type="date" name="date-usuario" id="nacimiento">    
+                <input type="date" name="nacimiento" id="nacimiento">    
             </div>
 
             <div class="label">
                 <label for="nacionalidad">Nacionalidad: </label>
-                <select name="nacionalidad-usuario" id="nacionalidad">
+                <select name="nacionalidad" id="nacionalidad">
                     <option value="">--Seleccione un país--</option>
                     <option value="AR">Argentina</option>
                     <option value="BR">Brasil</option>
@@ -100,13 +101,13 @@
 
             <div class="label">
                 <label for="password">Contraseña: </label>
-                <input type="password" name="password-usuario" id="password" minlength="8" maxlength="12">
+                <input type="password" name="password" id="password" minlength="8" maxlength="12" placeholder="*********">
             </div>
 
             
             <div class="label">
                 <label for="password">Reingrese contraseña: </label>
-                <input type="password" name="reingreso-password-usuario" id="password">
+                <input type="password" name="reingreso-password" id="password" placeholder="*********">
             </div>
 
 
@@ -139,7 +140,8 @@
     </div>
 </footer>
 
-    <script type="text/javascript" src="/assets/js/menu.js"></script>
+<script type="text/javascript" src="/assets/js/menu.js"></script>
+<script type="text/javascript" src="/assets/js/formulario.js"></script>
 
 </body>
 </html>
