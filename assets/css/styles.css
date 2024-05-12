@@ -13,7 +13,6 @@ body {
 }
 
 
-
 /* -----------------------------NAV------------------------------- */
 
 header {
@@ -171,7 +170,7 @@ h1 {
 
 
 .prod img {
-  width: 100%;
+  width: 70%;
   height: auto;
   border-radius: 10px;
 }
@@ -179,11 +178,32 @@ h1 {
 .imgs-productos {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 20px; 
+  grid-gap: 100px; 
   justify-items: center; 
   align-items: center; 
   margin: 3em;
 }
+
+.carrito {
+  color: #023927;
+  font-weight: 700;
+  background-color: #7fffd4;
+  width: 50%;
+  height: 2em;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prod {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+ 
 
 
 /* ---------------------FORMULARIO REGISTRO------------------------------ */
