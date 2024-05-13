@@ -8,16 +8,16 @@ document.addEventListener('DOMContentLoaded', function () {
             nombre: formulario.name.value,
             apellido: formulario.lastname.value, 
             correo: formulario.email.value,
-            color: formulario.sexo.value,
-            fecha: formulario.nacimiento.value,
-            archivo: formulario.nacionalidad.value,
-            archivo: formulario.password.value,
-            archivo: formulario.reingreso-password.value,
-            suscripcion: formulario.suscripcion.checked
+            sexo: formulario.sexo.value,
+            fecha: formulario.fecha.value,
+            nacionalidad: formulario.nacionalidad.value,
+            password: formulario.password.value,
+            password2: formulario.reingresoPassword.value,
+            terminos: formulario.condiciones.checked
         };
 
         localStorage.setItem('datosFormulario', JSON.stringify(datos));
         sessionStorage.setItem('datosFormulario', JSON.stringify(datos));
-        window.location.href = 'respuesta.html';
+        window.location.href = 'respuesta-registro.html';
     });
 });
