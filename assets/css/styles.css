@@ -218,6 +218,22 @@ justify-content: center;
 align-items: center;
 gap: 10px;
 }
+/*----------------------QUIENES SOMOS-----------------------------------*/
+
+.felicitas p{
+  color: #000000;
+}
+
+.felicitas img{
+  width: 150px;
+}
+
+/* ---------------------CONTACTO------------------------------ */
+.contacto p{
+  color: #000000;
+  text-align: center;
+}
+
 
 /* ---------------------FORMULARIO REGISTRO------------------------------ */
 
