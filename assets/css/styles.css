@@ -16,7 +16,7 @@ body {
 /* -----------------------------NAV------------------------------- */
 
 header {
-  position: sticky;
+  position:sticky;
   top: 0;
 }
 
@@ -122,9 +122,6 @@ h1 {
 
 /* -----------------------------PRODUCTOS INDEX------------------------------- */
 
-.container-home div{ 
-position: relative;
-}
 
 .container-home {
 display: grid;
@@ -134,6 +131,7 @@ justify-content: space-around;
 align-items: center;
 margin: 4em;
 grid-template-columns: auto;
+position: static;
 }
 
 .container-home img {
@@ -330,6 +328,7 @@ footer a {
 .icon-footer {
 padding-bottom: 10px;
 align-items: center;
+text-align: center;
 }
 
 .derechos {
