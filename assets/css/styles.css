@@ -230,11 +230,49 @@ gap: 10px;
 }
 
 /* ---------------------CONTACTO------------------------------ */
-.contacto p{
-  color: #000000;
+.contacto {
+  color:#000000;
   text-align: center;
 }
+.mensaje {
+  display:flex;
+  padding: 20px;
+  margin:auto;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
 
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #03989e;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #f15561;
+} 
 
 /* ---------------------FORMULARIO REGISTRO------------------------------ */
 
@@ -266,7 +304,7 @@ justify-content: center;
 }
 
 [type="submit" ] {
-  background-color: #7fffd4;
+  background-color: #03989e;
   width: 15em;
   height: 3em;
   font-weight:700;
