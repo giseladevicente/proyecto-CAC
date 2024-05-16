@@ -310,19 +310,6 @@ justify-content: center;
   font-weight:700;
 }
 
-.error {
-  border-color: red;
-  color: red;
-  background-color: #ffc0cb;
-}
-
-.informeErrores {
-  color: red;
-  font-weight: 600;
-  font-size: 1em;
-  margin-bottom: 1em;
-}
-
 
 
 /* ------------------------------INICIO-SESIÓN--------------------------- */
