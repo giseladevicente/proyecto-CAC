@@ -52,8 +52,10 @@
         <h2 class="title-form">Registrate!!</h2>
 
         <div class="container-form-flex">
-        <form action="" method="" class="form-registro" id="formulario-registro"> <!-- # Es para poder simular que se envian los datos -->
-            
+        <form action="#" method="get" class="form-registro" id="formulario-registro"> <!-- # Es para poder simular que se envían los datos -->
+        
+            <!-- <div id="errorName"></div> -->
+
             <div class="label">              
                 <label for="name">Nombre: </label>
                 <input type="text" name="name" id="name" placeholder="Escribí tu nombre" required>
@@ -71,11 +73,11 @@
 
             <div class="label">
                 <p>Sexo: </p>
-                <input type="radio" name="sexo" id="sexo" value="f">
-                <label for="sexo">Femenino</label>
+                <input type="radio" name="sexo" id="sexo_f" value="f">
+                <label for="sexo_f">Femenino</label>
                 
-                <input type="radio" name="sexo" id="sexo" value="m">
-                <label for="sexo">Masculino</label>
+                <input type="radio" name="sexo" id="sexo_m" value="m">
+                <label for="sexo_m">Masculino</label>
             </div>
 
 
@@ -143,6 +145,7 @@
 </footer>
 
 <script type="text/javascript" src="/assets/js/menu.js"></script>
+<!-- <script type="text/javascript" src="/assets/js/validacion-registro.js"></script> -->
 <script type="text/javascript" src="/assets/js/formulario.js"></script>
 
 </body>
