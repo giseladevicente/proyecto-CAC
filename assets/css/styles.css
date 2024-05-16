@@ -230,28 +230,18 @@ gap: 10px;
 }
 
 /* ---------------------CONTACTO------------------------------ */
-
-/* body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}  */
-
+.contacto {
+  color:#000000;
+  text-align: center;
+}
 .mensaje {
   display:flex;
   padding: 20px;
+  margin:auto;
   justify-content: center;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 300px;
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
 }
 
 label {
