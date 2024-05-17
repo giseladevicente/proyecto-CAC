@@ -276,39 +276,46 @@ button:hover {
 
 /* ---------------------FORMULARIO REGISTRO------------------------------ */
 
-.container-form {
-padding: 1em;    
+.container-form{
+  color:#000000;
+  text-align: center;
 }
 
-.container-form-flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.container-form-flex{
+padding: auto;
+}
+
+.container-form-flex{
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .label {
   margin-bottom: 2em;
+  color:#032e4b;
+}
+.title-form{
+font-size: 2em;
+text-align: center;
+margin-top: 1em;
+margin-bottom: 1em;
 }
 
-.title-form {
-  margin-bottom: 1em;
-  font-size: 2em;
-  text-align: center;
-  color: #deb887;
-  text-decoration-line: underline;
-}
-
-.boton-form {
+.boton-form{
 display: flex;
 justify-content: center;
+font-size: 2em;
+width: 14em;
+height: 3em;
 }
 
-[type="submit" ] {
+[type="submit"] {
   background-color: #03989e;
   width: 15em;
   height: 3em;
   font-weight:700;
-}
+} 
 
 
 
