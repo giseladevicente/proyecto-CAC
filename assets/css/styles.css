@@ -295,6 +295,7 @@ align-items: center;
   margin-bottom: 2em;
   color:#032e4b;
 }
+
 .title-form{
 font-size: 2em;
 text-align: center;
@@ -317,6 +318,29 @@ height: 3em;
   font-weight:700;
 } 
 
+.inline, .parrafo-radio,.radio-input {
+  display: inline;
+}
+
+.parrafo-radio {
+  margin-right: 1em;
+}
+
+.radio-input {
+  margin-right: 1em;
+  vertical-align: middle;
+}
+
+[type="checkbox"] {
+  vertical-align: middle;
+}
+
+.texto-error {
+  color: #f00;
+  font-weight: 700;
+  font-size: 1em;
+  margin-bottom: 1em;
+}
 
 
 /* ------------------------------INICIO-SESIÓN--------------------------- */

@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log("formulario si es válido")
         }
     });
-
+    
  //--------------------OK-----------------------
     // Función para validad campos válidos
     const validarFormulario = () => {
