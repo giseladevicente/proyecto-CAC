@@ -311,14 +311,14 @@ width: 14em;
 height: 3em;
 }
 
-[type="submit"] {
+.submit {
   background-color: #03989e;
   width: 15em;
   height: 3em;
   font-weight:700;
 } 
 
-.inline, .parrafo-radio,.radio-input {
+.inline, .parrafo-radio, .radio-input {
   display: inline;
 }
 

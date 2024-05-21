@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     
- //--------------------OK-----------------------
+
     // Función para validad campos válidos
     const validarFormulario = () => {
         let isValid = true;
@@ -25,15 +25,13 @@ document.addEventListener('DOMContentLoaded', () => {
         isValid = validarCampoVacio('name', 'El nombre es obligatorio') && isValid;        
         isValid = validarCampoVacio('lastname', 'El apellido es obligatorio') && isValid;
         isValid = validarCampoEmail('email', 'El correo electrónico no es válido') && isValid;
+        isValid = validarSexo('sexo', 'Debe seleccionar su sexo') && isValid;
         isValid = validarCampoVacio('fecha', 'La fecha de nacimiento es obligatoria') && isValid;
         isValid = validarCampoVacio('nacionalidad', 'El país es obligatorio') && isValid;
         isValid = validarCampoVacio('password', 'La contraseña es obligatoria') && isValid;
+        isValid = validarContrasenia('password', 'La contraseña no cumple con los requisitos') && isValid;
         isValid = validarCampoVacio('reingresoPassword', 'El reingreso de la contraseña es obligatorio') && isValid;
-
-        const sexoValido = validarSexo('sexo', 'Debe seleccionar su sexo');
-        if (!sexoValido) {
-            isValid = false;
-        }
+        isValid = validarReingresoContrasenia('password', 'reingresoPassword', 'Las contraseñas no coinciden') && isValid;
 
         const terminos = document.getElementById('condiciones').checked;
         if (!terminos) {
@@ -46,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return isValid;
     };
 
- //--------------------OK-----------------------
+
     // Función para Comprobar campos vacíos
     const validarCampoVacio = (idElemento, mensajeError) => {
         const field = document.getElementById(idElemento);
@@ -62,11 +60,10 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
 
- //--------------------OK-----------------------
     // Mensaje de Error
     const errorCampo = (input, mensaje) => {
         if (input) {
-            const formControl = input.closest('div'); // Hace referencia al contenedor div del input.
+            const formControl = input.closest('.label'); 
             if (formControl) {
                 const textoError = formControl.querySelector('.texto-error');
                 formControl.classList.add('error');
@@ -76,16 +73,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
- //--------------------OK-----------------------
-    // Función de eliminación del mensaje de error al validar correctamente
+ 
+    // Función Validación correcta
     const validacionCorrecta = (input) => {
-        const formControl = input.closest('div');
+        const formControl = input.closest('.label');
         formControl.classList.remove('error');
         const textoError = formControl.querySelector('.texto-error');
         textoError.innerText = '';
     };
 
- //--------------------OK-----------------------
+
     // Función Validación de Email
     const validarCampoEmail = (idElemento, mensajeError) => {
         const field = document.getElementById(idElemento);
@@ -107,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return re.test(email);
     };
 
+
     // Función que elimina el error al escribir en el campo del input
     form.querySelectorAll('input').forEach(input => {
         input.addEventListener('input', () => {
@@ -116,6 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
 
     // Función Validación campo Nacionalidad
     form.querySelectorAll('select').forEach(select => {
@@ -129,20 +128,62 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // Función validación campo sexo
-    const validarSexo = (idElemento, mensajeError) => {
-        const radios = document.querySelectorAll(`#${idElemento} input[type="radio"]`);
+    const validarSexo = (nameElemento, mensajeError) => {
+        const radios = document.querySelectorAll(`input[name="${nameElemento}"]`);
         let isChecked = false;
         radios.forEach(radio => {
             if (radio.checked) {
                 isChecked = true;
             }
         });
+        const formControl = radios[0].closest('.label');
+        const errorText = formControl.querySelector('.texto-error');
         if (!isChecked) {
-            errorCampo(document.getElementById(idElemento), mensajeError);
+            formControl.classList.add('error');
+            errorText.innerText = mensajeError;
             return false;
         } else {
-            validacionCorrecta(document.getElementById(idElemento));
+            formControl.classList.remove('error');
+            errorText.innerText = '';
             return true;
         }
     };
+
+
+    // Función validación Password
+    const validarContrasenia = (idElemento, mensajeError) => {
+        const field = document.getElementById(idElemento);
+        const password = field.value.trim();
+        const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    
+        if (password === '') {
+            errorCampo(field, 'La contraseña es obligatoria');
+            return false;
+        } else if (!re.test(password)) {
+            errorCampo(field, mensajeError + '. Debe contener al menos 8 caracteres, incluyendo al menos una letra mayúscula, una letra minúscula y un número.');
+            return false;
+        } else {
+            validacionCorrecta(field);
+            return true;
+        }
+    };
+
+
+    // Función validación de Reingreso de Password
+    const validarReingresoContrasenia = (idContrasenia, idReingresoContrasenia, mensajeError) => {
+        const contrasenia = document.getElementById(idContrasenia).value.trim();
+        const reingresoContrasenia = document.getElementById(idReingresoContrasenia).value.trim();
+
+        if (reingresoContrasenia === '') {
+            errorCampo(document.getElementById(idReingresoContrasenia), 'El reingreso de la contraseña es obligatorio');
+            return false;
+        } else if (contrasenia !== reingresoContrasenia) {
+            errorCampo(document.getElementById(idReingresoContrasenia), mensajeError);
+            return false;
+        } else {
+            validacionCorrecta(document.getElementById(idReingresoContrasenia));
+            return true;
+        }
+    };
+  
 });
