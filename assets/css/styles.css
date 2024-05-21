@@ -243,10 +243,11 @@ gap: 10px;
 }
 
 /* ---------------------CONTACTO------------------------------ */
-.contacto {
+ .contacto {
   color:#000000;
   text-align: center;
 }
+
 .mensaje {
   display:flex;
   padding: 20px;
@@ -270,9 +271,9 @@ textarea {
   margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 4px;
-}
+}*/
 
-button {
+/* button {
   width: 100%;
   padding: 10px;
   background-color: #03989e;
@@ -285,11 +286,11 @@ button {
 
 button:hover {
   background-color: #f15561;
-} 
+}  */
 
 /* ---------------------FORMULARIO REGISTRO------------------------------ */
 
-.container-form{
+/* .container-form{
   color:#000000;
   text-align: center;
 }
@@ -353,7 +354,7 @@ height: 3em;
   font-weight: 700;
   font-size: 1em;
   margin-bottom: 1em;
-}
+} */
 
 
 /* ------------------------------INICIO-SESIÓN--------------------------- */
