@@ -160,8 +160,9 @@ position: static;
 .prod-pages h2 {
   text-align: center;
   font-size: 3em;
-  color: #ffffff;
+  /* color: #ffffff; */
 } 
+
 
 .container-prod h3 {
 text-align: center;
@@ -272,6 +273,7 @@ gap: 10px;
 }
 
 .label {
+  border: none;
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
@@ -284,6 +286,7 @@ textarea {
   margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 button {
@@ -326,17 +329,18 @@ align-items: center;
 
 .inline, .parrafo-radio, .radio-input {
   display: inline;
+  border: none;
 }
-*/
+
 .parrafo-radio {
   margin-right: 1em;
 }
-*/
+
 .radio-input {
   margin-right: 1em;
   vertical-align: middle;
 }
-*/
+
 [type="checkbox"] {
   vertical-align: middle;
 }
@@ -352,34 +356,39 @@ align-items: center;
 /* ------------------------------INICIO-SESIÓN--------------------------- */
 
 .login {
-  width: 100%;
+  display:flex;
+  padding: 20px;
+  margin:auto;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  color: #e8e8e8;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  /* width: 100%;
   height: 60vh;
   display: grid;
-  place-items: center;
+  place-items: center; */
 }
 
-.title-sesion {
-margin: 1em;
-}
 
-.form {
+/* .form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 5px solid #023927;
   padding: 2em;
   font-size: 1.2em;
-}
+} */
 
 .label-inicio {
+display: flex;
 font-size: 14px;
 font-weight: bold;
 margin-bottom: 4px;
 }
 
-
 .input-inicio {
-background-color: #e8e8e8;
 border: none;
 cursor: pointer;
 border-radius: 8px;
@@ -388,7 +397,7 @@ padding: 6px;
 margin-bottom: 2em;
 font-size: 14px;
 }
-
+/* 
 .login-button {
 border-radius: 8px;
 color: #fff;
@@ -398,7 +407,7 @@ cursor: pointer;
 font-weight: bold;
 height: 40px;
 margin-top: 3em;
-}
+} */
 
 /* -----------------------------FOOTER------------------------------- */
 
