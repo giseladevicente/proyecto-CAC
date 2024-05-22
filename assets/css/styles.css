@@ -122,14 +122,13 @@ h1 {
 
 /* -----------------------------PRODUCTOS INDEX------------------------------- */
 
-
 .container-home {
 display: grid;
-grid-template-rows: 1fr;
+/* grid-template-rows: 1fr; */
 gap: 20px;
 justify-content: space-around;
 align-items: center;
-margin: 4em;
+margin: 1em;
 grid-template-columns: auto;
 position: static;
 }
@@ -137,11 +136,12 @@ position: static;
 .container-home img {
   max-width: 100%;
   height: auto;
-  
+  margin: 1em;
+
 }
 
 .container-home img:hover {
-  transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar con el mouse por encima */
+  /* transform: scale(1.1); Aumenta el tamaño de la imagen al pasar con el mouse por encima */
   border-color: #525252; /* Cambia el color del borde al pasar con el mouse por encima */
 }
 
@@ -150,9 +150,9 @@ position: static;
   background-color: #03989e;
   color:#000000;
   justify-content:space-around;
-  margin-top: 1em;
-  font-size: 2em;
+  font-size: 1em;
   align-items: center;
+  border-radius: 5%;
 }
 
 
@@ -219,27 +219,38 @@ align-items: center;
 gap: 10px;
 }
 
-/* .whatsapp-button{
-  position:static;
-  bottom: 20%;
-  right: 20%;
+.whatsapp-button{
+  position:fixed;
+  bottom: 3%;
+  right: 3%;
   z-index: 1000;
 
 }
 .whatsapp-button img{
   width: 50px;
   height: 50px;
-} */
+}
 
 /*----------------------QUIENES SOMOS-----------------------------------*/
 
-.felicitas p{
-  color: #000000;
+.tituloMihistoria h1{
+  color: #ffffff;
+  text-align:center;
+  font-size: 30px;
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
-
+.felicitas h2{
+  color: #000000;
+  font-size: 15px;
+  text-align:justify;
+  margin: 3em;
+}
 .felicitas img{
-  width: 150px;
+  width: 250px;
   position: center;
+  margin-left: 26em;
+   
 }
 
 /* ---------------------CONTACTO------------------------------ */
