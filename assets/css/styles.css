@@ -137,11 +137,10 @@ position: static;
   max-width: 100%;
   height: auto;
   margin: 1em;
-
 }
 
 .container-home img:hover {
-  /* transform: scale(1.1); Aumenta el tamaño de la imagen al pasar con el mouse por encima */
+  transform: scale(1.1); /*Aumenta el tamaño de la imagen al pasar con el mouse por encima */
   border-color: #525252; /* Cambia el color del borde al pasar con el mouse por encima */
 }
 
@@ -257,19 +256,22 @@ gap: 10px;
  .contacto {
   color:#000000;
   text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .mensaje {
   display:flex;
   padding: 20px;
   margin:auto;
+  margin-bottom: 10px;
   justify-content: center;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 300px;
 }
 
-label {
+.label {
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
@@ -282,9 +284,9 @@ textarea {
   margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 4px;
-}*/
+}
 
-/* button {
+button {
   width: 100%;
   padding: 10px;
   background-color: #03989e;
@@ -297,13 +299,19 @@ textarea {
 
 button:hover {
   background-color: #f15561;
-}  */
+} 
 
 /* ---------------------FORMULARIO REGISTRO------------------------------ */
 
-/* .container-form{
-  color:#000000;
-  text-align: center;
+.container-form{
+  display:flex;
+  padding: 20px;
+  margin:auto;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  color: #e8e8e8;
 }
 
 .container-form-flex{
@@ -316,56 +324,29 @@ justify-content: center;
 align-items: center;
 }
 
-.label {
-  margin-bottom: 2em;
-  color:#032e4b;
-}
-
-.title-form{
-font-size: 2em;
-text-align: center;
-margin-top: 1em;
-margin-bottom: 1em;
-}
-
-.boton-form{
-display: flex;
-justify-content: center;
-font-size: 2em;
-width: 14em;
-height: 3em;
-}
-
-.submit {
-  background-color: #03989e;
-  width: 15em;
-  height: 3em;
-  font-weight:700;
-} 
-
 .inline, .parrafo-radio, .radio-input {
   display: inline;
 }
-
+*/
 .parrafo-radio {
   margin-right: 1em;
 }
-
+*/
 .radio-input {
   margin-right: 1em;
   vertical-align: middle;
 }
-
+*/
 [type="checkbox"] {
   vertical-align: middle;
 }
 
 .texto-error {
-  color: #f00;
+  color: #f15561;
   font-weight: 700;
   font-size: 1em;
   margin-bottom: 1em;
-} */
+} 
 
 
 /* ------------------------------INICIO-SESIÓN--------------------------- */
