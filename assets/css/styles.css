@@ -490,7 +490,8 @@ width: 100%;
   }
   
   .menu {
-    background-color: #d1cfcf;
+  color: #000000;
+  background-color: #ffffff;
   }
 
   .menu-inicio{
@@ -528,8 +529,8 @@ width: 100%;
 
   .container-form {
     width: 50%; 
-    border: 10px solid #f005;
     margin: 3.5em auto;
+    border-radius: 8px;
   }
 
   .container-sesion h2 {
@@ -621,7 +622,9 @@ width: 100%;
 
 .container-form {
   width: 40%;
-  border: 10px solid #f005;
-  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20em;
+  border-radius: 8px;
 }
 }
