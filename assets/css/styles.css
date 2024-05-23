@@ -476,7 +476,7 @@ width: 100%;
   }
   
   .title-footer {
-    display: none;
+    display:flex;
   }
 
 }
@@ -509,16 +509,15 @@ width: 100%;
   }
   
   .leyenda-banner {
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: 400;
     padding: 1em;
   }
   
   h1 {
-    display: none;
+    display: flex;
   }
 
-  
   .container-home {
     margin: 4em;
   }
@@ -541,7 +540,7 @@ width: 100%;
     height: 20%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content:space-around;
     align-items: center;
   }  
   
@@ -556,12 +555,11 @@ width: 100%;
     align-items: center;
     gap: 10px;
   }
-  
+   
   footer h2 {
     margin: 0px;
   }
 
-  
 }
 
 /* ------------------- PCS ------------------------------------ */
