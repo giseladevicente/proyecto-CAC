@@ -1,5 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    const parametrosURL = new URLSearchParams(window.location.search);
+    const registroExitosoParametro = parametrosURL.get('registro');
+    //  Si registro fue exitoso muestra alert al ser redireccionado de registro.
+    if (registroExitosoParametro === 'exitoso') {
+    alert('¡Registro exitoso! Por favor, inicia sesión para continuar.');
+    }
+
     const formInicio = document.querySelector('#formInicio');
     const formErrors = document.getElementById('form-errors');
     
@@ -12,12 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!validarFormularioInicio()) {
             console.log('El formulario de inicio de sesión no es válido');
             formErrors.innerText = 'El formulario de inicio de sesión no es válido. Por favor, corrige los errores.';
-            // event.preventDefault(); 
+           
         } else {
             console.log('El formulario de inicio de sesión es válido');
             formErrors.innerText = 'El formulario de inicio de sesión es válido. Enviando datos...';
 
-            // const usuario = formInicio.usuario.value.trim();
             const datosFormulario = JSON.parse(localStorage.getItem('datosFormulario'));
             const nombreUsuario = datosFormulario.nombre;
 

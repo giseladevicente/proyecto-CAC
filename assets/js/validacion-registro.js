@@ -37,6 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log("Datos del formulario guardados en el almacenamiento local:", localStorage.getItem('datosFormulario'));
     
             console.log("formulario si es válido");
+
+            const nuevaVentana = window.open('respuesta-registro.html', 'formularioRespuesta', 'width=600,height=400');
+
+            setTimeout(() => {
+                window.location.href = '/pages/inicio-sesion.html?registro=exitoso';
+            }, 70); 
     
             history.pushState({}, '', 'respuesta-registro.html');
         }
