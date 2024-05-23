@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
- 
+
     const form = document.querySelector('#formulario-registro');
     const formErrors = document.getElementById('form-errors');
 
@@ -13,7 +13,32 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             console.log('El formulario es válido');
             formErrors.innerText = 'El formulario es válido. Enviando datos...';
-            console.log("formulario si es válido")
+
+            const datos = {
+                nombre: form.name.value,
+                apellido: form.lastname.value, 
+                correo: form.email.value,
+                sexo: form.sexo.value,
+                fecha: form.fecha.value,
+                nacionalidad: form.nacionalidad.value,
+                password: form.password.value,
+                password2: form.reingresoPassword.value,
+                terminos: form.condiciones.checked
+            };
+
+            localStorage.setItem('datosFormulario', JSON.stringify(datos));
+            sessionStorage.setItem('datosFormulario', JSON.stringify(datos));
+    
+            const email = datos.correo;
+            const password = datos.password;
+            localStorage.setItem('userEmail', email);
+            localStorage.setItem('userPassword', password);
+
+            console.log("Datos del formulario guardados en el almacenamiento local:", localStorage.getItem('datosFormulario'));
+    
+            console.log("formulario si es válido");
+    
+            history.pushState({}, '', 'respuesta-registro.html');
         }
     });
     
@@ -121,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
         select.addEventListener('change', () => {
             const value = select.value;
             if (value !== '') {
-                setSuccessFor(select);
+                validacionCorrecta(select);
             }
         });
     });

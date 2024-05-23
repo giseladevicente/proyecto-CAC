@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Agregar favicon -->
-
+    <!-- favicon -->
+    <link rel="icon" href="/favicon.ico">
     <!-- cdn font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
@@ -55,15 +55,21 @@
     <main>
         <section class="login">  
                 
-                <form action="#" method="post" class="form">
+                <form action="#" method="get" class="form" id="formInicio">
 
+                    <div id="form-errors" class="texto-error"></div>
+
+                    <div>
                         <label for="usuario" class="label-inicio">Usuario</label>
                         <input type="text" name="usuario" id="usuario" class="input-inicio">
-                
+                    </div>
+
+                    <div>
                         <label for="password" class="label-inicio">Contraseña</label>
                         <input type="password" name="password" id="password" class="input-inicio" placeholder="*********">
+                    </div>
+
                     
-                    <!-- <input type="submit" value="Iniciar" class="login-button"> -->
                     <button type="submit">Enviar</button>   
                 </form>
     
@@ -89,6 +95,7 @@
         </div>
     </footer>
     <script type="text/javascript" src="/assets/js/menu.js"></script>
+    <script type="text/javascript" src="/assets/js/inicio-sesion.js"></script>
 
   
 </body>
