@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Agregar favicon -->
+    <!-- favicon -->
+    <link rel="icon" href="/favicon.ico">
 
     <!-- cdn font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -49,6 +50,7 @@
 
         <section class="banner">
             <h2>Nuestros Productos</h2>
+            <h3 id="saludoUsuario"></h3>
         </section>
 
         <section class="container-prod">
@@ -212,6 +214,16 @@
 </footer>
 <script type="text/javascript" src="/assets/js/menu.js"></script>
 
+<!-- Almacenamiento del nombre de usuario  -->
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', () => {
+        const nombreUsuario = sessionStorage.getItem('nombreUsuario');
+        if (nombreUsuario) {
+            const saludoUsuario = document.getElementById('saludoUsuario');
+            saludoUsuario.innerText = `Hola, ${nombreUsuario}`;
+        }
+    });
+</script>
 
 </body>
 </html>

@@ -4,15 +4,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const formErrors = document.getElementById('form-errors');
     
     formInicio.addEventListener('submit', (event) => {
+        event.preventDefault(); //  // Previene el envío del formulario
         console.log('Submit del formulario de inicio de sesión capturado');
-        formErrors.innerText = '';
+     
+        formErrors.innerText = ''; // // Limpia errores anteriores
+
         if (!validarFormularioInicio()) {
             console.log('El formulario de inicio de sesión no es válido');
             formErrors.innerText = 'El formulario de inicio de sesión no es válido. Por favor, corrige los errores.';
-            event.preventDefault(); 
+            // event.preventDefault(); 
         } else {
             console.log('El formulario de inicio de sesión es válido');
             formErrors.innerText = 'El formulario de inicio de sesión es válido. Enviando datos...';
+
+            // const usuario = formInicio.usuario.value.trim();
+            const datosFormulario = JSON.parse(localStorage.getItem('datosFormulario'));
+            const nombreUsuario = datosFormulario.nombre;
+
+            // Almacenamiento del nombre del usuario en sessionStorage
+            sessionStorage.setItem('nombreUsuario', nombreUsuario);
+
+            // Redirección a la página productos.html
+            window.location.href = '/pages/productos.html';
         }
     });
 
@@ -38,7 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
             errorCampo(field, mensajeError);
             return false;
         } else {
-            validacionCorrecta(field);
+            // validacionCorrecta(field);
+            limpiarError(field);
             return true;
         }
     };
@@ -53,39 +67,33 @@ document.addEventListener('DOMContentLoaded', () => {
         const registradoPassword = localStorage.getItem('userPassword');
 
         if (usuario !== registradoUsuario || password !== registradoPassword) {
-            errorCampo(document.getElementById(idPassword), mensajeError);
+            mostrarError(document.getElementById(idPassword), mensajeError);
             return false;
         } else {
-            validacionCorrecta(document.getElementById(idPassword));
+            limpiarError(document.getElementById(idPassword));
             return true;
         }
     };
     
-
-    // Mensaje de error
-    const errorCampo = (input, mensaje) => {
-        if (input) {
-            const formControl = input.closest('div'); 
-            if (formControl) {
-                const textoError = formControl.querySelector('.texto-error');
-                if (!textoError) {
-                    const nuevoTextoError = document.createElement('div');
-                    nuevoTextoError.classList.add('texto-error');
-                    nuevoTextoError.innerText = mensaje;
-                    formControl.appendChild(nuevoTextoError);
-                } else {
-                    textoError.innerText = mensaje;
-                }
-                formControl.classList.add('error');
-                input.focus(); 
+    // Función para mostrar errores
+    const mostrarError = (input, mensaje) => {
+        const formControl = input.closest('div');
+        if (formControl) {
+            let textoError = formControl.querySelector('.texto-error');
+            if (!textoError) {
+                textoError = document.createElement('div');
+                textoError.classList.add('texto-error');
+                formControl.appendChild(textoError);
             }
+            textoError.innerText = mensaje;
+            formControl.classList.add('error');
+            input.focus();
         }
     };
 
-
-    // Función para validación correcta
-    const validacionCorrecta = (input) => {
-        const formControl = input.closest('div'); 
+    // Función para eliminar errores
+    const limpiarError = (input) => {
+        const formControl = input.closest('div');
         if (formControl) {
             formControl.classList.remove('error');
             const textoError = formControl.querySelector('.texto-error');
@@ -95,15 +103,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-
-    // Función que elimina el error al escribir en el campo del input
+    // Función que elimina errores al escribir
     formInicio.querySelectorAll('input').forEach(input => {
         input.addEventListener('input', () => {
-            const value = input.value.trim();
-            if (value !== '') {
-                validacionCorrecta(input);
+            if (input.value.trim() !== '') {
+                limpiarError(input);
             }
         });
     });
-
 });
