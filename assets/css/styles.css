@@ -97,11 +97,19 @@ background: #f15561;
   font-size: 0.9em;
 }
 
+
 .menu-inicio a {
 text-decoration: none;
 color: #000000;
 }
 
+/* .menu-inicio:hover{
+  background: #f15561;
+}
+
+.menu-inicio--select{
+  background: #f15561;
+} */
 /* ---------------------------------BANNER---------------------------------- */
 
 .banner {
@@ -234,22 +242,24 @@ gap: 10px;
 /*----------------------QUIENES SOMOS-----------------------------------*/
 
 .tituloMihistoria h1{
-  color: #ffffff;
+  color: #032e4b;
   text-align:center;
   font-size: 30px;
-  margin-bottom: 1em;
-  margin-top: 1em;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 .felicitas h2{
   color: #000000;
   font-size: 15px;
-  text-align:justify;
-  margin: 3em;
+  font-weight: 100;
+  text-align:center;
+  margin: 1em;
 }
 .felicitas img{
   width: 250px;
   position: center;
   margin-left: 26em;
+  margin-bottom: 15px;
    
 }
 
@@ -309,8 +319,8 @@ button:hover {
 .container-form{
   display:flex;
   padding: 20px;
-  margin-top: 3px;
-  margin-bottom: 3px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   justify-content: center;
   border-radius: 1px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
