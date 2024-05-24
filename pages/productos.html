@@ -21,7 +21,8 @@
 </head>
 <body>
 
-<!-----------------------------------HEADER---------------------------------------------->
+<!-- >>>>>>>>>>>>>>>>>>>>>>>> HEADER <<<<<<<<<<<<<<<<<<<<<<<<< -->
+
 <header>
     <nav class="menu">
             <span id="boton_menu"><i class="fa-solid fa-bars menu-icon"></i></span>   
@@ -45,12 +46,12 @@
     </nav>
 </header>
 
-<!-----------------------------------MAIN---------------------------------------------->
+<!-- >>>>>>>>>>>>>>>>>>>>>>>> MAIN <<<<<<<<<<<<<<<<<<<<<<<<<  -->
     <main class="prod-pages">
 
         <section class="banner">
             <h2>Nuestros Productos</h2>
-            <h3 id="saludoUsuario"></h3>
+            <div id="saludoUsuario"></div>
         </section>
 
         <section class="container-prod">
@@ -194,7 +195,7 @@
         </section>
     </main>
 
-<!-----------------------------------FOOTER---------------------------------------------->
+<!-- >>>>>>>>>>>>>>>>>>>>>>>> FOOTER <<<<<<<<<<<<<<<<<<<<<<<<< -->
 <footer>
     <div class="icon-footer">
         <h2 class="title-footer">Redes Sociales</h2>
@@ -212,10 +213,10 @@
     <p class="derechos">Todos Los Derechos Reservados. 2024</p>
     </div>
 </footer>
-<script type="text/javascript" src="/assets/js/menu.js"></script>
+<script src="/assets/js/menu.js"></script>
 
 <!-- Almacenamiento del nombre de usuario  -->
-<script type="text/javascript">
+<script>
     document.addEventListener('DOMContentLoaded', () => {
         const nombreUsuario = sessionStorage.getItem('nombreUsuario');
         if (nombreUsuario) {
